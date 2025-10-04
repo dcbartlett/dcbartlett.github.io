@@ -17,6 +17,11 @@
 		5173
 	],
 
+	// Mount SSH keys for git operations
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,readonly"
+	],
+
 	// Install dependencies after the container is created
 	"postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code",
 

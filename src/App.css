@@ -4,10 +4,17 @@
   top: 0;
   z-index: 100;
   margin-top: -60px;
+  background-image: url('/moon_element_navigation.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-bottom: calc(100vw * 0.0375);
 }
 
 .navigation {
-  background: var(--dark-bg);
+  background: transparent;
   position: relative;
   z-index: 10;
 }
@@ -75,26 +82,14 @@
 
 .hero-section {
   padding: 80px 20px 60px;
-  background: var(--dark-bg);
+  background: linear-gradient(to bottom, var(--dark-bg) 50%, transparent 50%);
+  background-image: url('/moon_element_header.png'), linear-gradient(to bottom, var(--dark-bg) 50%, transparent 50%);
+  background-position: center calc(100% - 60px), top left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw auto, 100% 100%;
   position: relative;
 }
 
-.hero-arc {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.hero-arc svg {
-  display: block;
-  width: 100%;
-  height: var(--arc-depth);
-}
-
-.hero-arc path {
-  fill: var(--dark-bg);
-}
 
 .scroll-arrow {
   position: fixed;

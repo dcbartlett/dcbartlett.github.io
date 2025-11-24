@@ -1,4 +1,4 @@
-# Dennis Bartlett Portfolio
+# Dennise Bartlett Portfolio
 
 A modern React-based portfolio site built with Vite.
 

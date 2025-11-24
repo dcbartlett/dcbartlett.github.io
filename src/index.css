@@ -22,10 +22,15 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
+  background: url('/space_rocks.png'), linear-gradient(to bottom, #000000 75%, #333333);
+  background-position: top center, top left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100vw auto, 100% 100%;
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 a {

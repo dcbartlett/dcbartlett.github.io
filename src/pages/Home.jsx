@@ -4,6 +4,12 @@ import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
 
 function Home() {
+  const expertise = [
+    'OpenAI ChatGPT', 'Anthropic Claude',
+    'AWS/GCP/Azure', 'Docker/Kubernetes',
+    'Agentic AI', 'LLM Prompt Engineering'
+  ]
+
   const services = [
     {
       title: 'LLM Integration & Development',
@@ -33,7 +39,7 @@ function Home() {
 
   return (
     <>
-      <HeroSection />
+      <HeroSection expertise={expertise}/>
       <ServicesSection services={services} />
       <ContactSection />
       <Footer />

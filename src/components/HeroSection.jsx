@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react'
 import StickyNav from './StickyNav'
 
-function HeroSection() {
+function HeroSection({ expertise }) {
   const [showArrow, setShowArrow] = useState(true)
-
-  const expertise = [
-    'LangChain', 'OpenAI API', 'Anthropic Claude',
-    'AWS/GCP/Azure', 'Docker/Kubernetes', 'Fine-tuning'
-  ]
 
   useEffect(() => {
     const handleScroll = () => {

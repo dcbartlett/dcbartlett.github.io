@@ -20,12 +20,18 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  background: url('/space_rocks.png'), linear-gradient(to bottom, #000000 75%, #333333);
+  background: url('/space_rocks.png'), linear-gradient(to bottom, #000000 45%, #1C1C1C);
   background-position: top center, top left;
   background-repeat: no-repeat, no-repeat;
-  background-size: 100vw auto, 100% 100%;
+  background-size: 100% auto, 100% 100%;
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;

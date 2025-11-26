@@ -1,3 +1,7 @@
+:root {
+  --page-width: 1200px;
+}
+
 .sticky-nav-wrapper {
   position: -webkit-sticky;
   position: sticky;
@@ -21,7 +25,7 @@
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 16px 20px;
   display: flex;
@@ -112,7 +116,7 @@
 }
 
 .hero-container {
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 400px;
@@ -209,7 +213,7 @@
 
 .section {
   padding: 60px 20px;
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
 }
 
@@ -513,48 +517,84 @@
 }
 
 .footer {
-  background: transparent;
-  padding: 40px 20px;
-  margin-top: 60px;
+  background: url('/landscape.png'), transparent;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: calc(var(--page-width) + 400px) auto;
+  padding: 80px 20px;
+  overflow: visible;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
+  overflow: visible;
 }
 
 .copyright {
   color: var(--text-secondary);
   font-size: 0.95rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
-.scroll-to-top {
+.rocket {
   position: absolute;
-  right: 0;
-  background: var(--primary-color);
+  top: -95px;
+  right: -10px;
+  z-index: 1100;
+  background: url('/rocket.png'), transparent;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
   color: white;
   border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 100px;
+  height: 178px;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
+  transform: translateY(calc(-1 * var(--rocket-offset, 0px)));
 }
 
-.scroll-to-top:hover {
-  background: var(--secondary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(157, 73, 222, 0.4);
+.rocket.active {
+  background-image: url('/rocket_flying.png') !important;
+  background-color: transparent;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+  transition: none;
+}
+
+.rocket.resetting {
+  display: none;
+}
+
+.rocket:hover {
+  top: -102px;
+  background: url('/rocket_ready.png'), transparent;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.landing-pad {
+  position: absolute;
+  bottom: -70px;
+  right: -10px;
+  z-index: 1;
+  background: url('/pad.png'), transparent;
+  background-size: 100%;
+  width: 100px;
+  height: 50px;
 }
 
 @media (max-width: 768px) {
@@ -563,7 +603,7 @@
     gap: 20px;
   }
 
-  .scroll-to-top {
+  .rocket {
     position: static;
   }
 }

@@ -588,7 +588,7 @@
 
 .landing-pad {
   position: absolute;
-  bottom: -70px;
+  bottom: -50px;
   right: -10px;
   z-index: 1;
   background: url('/pad.png'), transparent;
